@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Firebase SDK to perform firebase basic operations -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+
+  <script>
+
+    // Firebase configuration. The following is this apps current firebase project configuration
+    var firebaseConfig = {
+    // TODO: Add your our config here
+    apiKey: "AIzaSyAUV35f5Zkday_q_YAc7Kk306HREUrPMKo",
+    authDomain: "app-to-learn-fbase-hashirakb.firebaseapp.com",
+    projectId: "app-to-learn-fbase-hashirakb",
+    storageBucket: "app-to-learn-fbase-hashirakb.appspot.com",
+    messagingSenderId: "656593164859",
+    appId: "1:656593164859:web:356c36e95aaf73ec841a1e",
+    measurementId: "G-8BYYS4CZVY"
+    };
+    /* A Firebase App is a container-like object that stores common configuration and shares authentication across Firebase services. After you initialize a Firebase App object in your code, you can add and start using Firebase services. */
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+<!-- This will make the page(HTML Elements) to load only after all JS, and Imports are loaded into Browser -->
+<script src="app.js" defer></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!-- https://fakerjs.dev/ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"
+    integrity="sha512-/seDHxVfh1NvFUscAj8GsHQVZJvr2jjAoYsNL7As2FCaFHUHYIarl3sRCvVlFgyouVNiRgHIebyLKjpgd1SLDw=="
+    crossorigin="anonymous"></script>
+    
+</head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- https://www.constant-surfer.com/info/x-ua-compatible/ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fireba'sics'</title>
+</head>
+<body>
+    <h1>Hashirs Awesome App 🔥</h1>
+
+    <section id="whenSignedOut"> <!-- https://www.w3schools.com/tags/tag_section.asp -->
+
+      <button id="signInBtn">Sign in with Google</button> <!-- https://www.w3schools.com/html/html_id.asp -->
+  
+    </section>
+  
+    <section id="whenSignedIn" hidden="true">
+  
+      <div id="userDetails"></div>
+  
+      <button id="signOutBtn">Sign Out</button>
+  
+    </section>
+
+    <!-- Space to render out the items from the Firebase DB -->
+    <section>
+
+      <h2>My Firestore Things</h2>
+  
+      <ul id="thingsList"></ul>
+  
+      <button id="createThing">Create a Thing</button>
+  
+    </section>
+
+</body>
+</html>
