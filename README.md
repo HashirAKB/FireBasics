@@ -12,8 +12,7 @@
 ➡Create Firestore database records and listen to changes in realtime. (firestore)
 
 ### Screenshot
-![App Screenshot](https://user-images.githubusercontent.com/20386725/185793532-1d6fc1de-6bea-4f8b-908b-2168a16dd0ca.png)
-
+<img src="https://user-images.githubusercontent.com/20386725/185793532-1d6fc1de-6bea-4f8b-908b-2168a16dd0ca.png" align="center" height="665" width="375" >
 
 ### Tech Stack
 HTNL, Javascript, Firebase
